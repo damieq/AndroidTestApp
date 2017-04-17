@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="MsgWithOutGeo">Tiene la Geolocalización deshabilitada, es necesaria activarla para poder continuar.</string>
+    <string name="MsgGoToSettings">Ir a la configuración</string>
+
+</resources>
