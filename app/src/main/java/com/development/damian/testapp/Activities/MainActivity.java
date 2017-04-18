@@ -1,4 +1,4 @@
-package com.development.damian.testapp;
+package com.development.damian.testapp.Activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,6 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.development.damian.testapp.Alarms.BroadcastReceiverNotificationAlarm;
+import com.development.damian.testapp.ApplicationState;
+import com.development.damian.testapp.R;
 import com.development.damian.testapp.statusbarnotification.StatusBarNotification;
 
 import java.text.DateFormat;
@@ -22,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (getIntent().getBooleanExtra("EXIT", false))
+        {
+            finish();
+        }
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

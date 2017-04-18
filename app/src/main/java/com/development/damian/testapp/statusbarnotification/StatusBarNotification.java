@@ -9,7 +9,7 @@ import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 
 import com.development.damian.testapp.ApplicationState;
-import com.development.damian.testapp.MainActivity;
+import com.development.damian.testapp.Activities.MainActivity;
 
 
 public class StatusBarNotification {

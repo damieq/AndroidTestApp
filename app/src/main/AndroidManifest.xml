@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:name=".ApplicationState"
@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -33,7 +33,11 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".Alarms.BroadcastReceiverNotificationAlarm" >
+        <activity android:name=".Activities.DialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:showOnLockScreen="true" />
+
+        <receiver android:name=".Alarms.BroadcastReceiverNotificationAlarm">
             <intent-filter>
                 <action android:name="damian.testapp.android.notification.alarm" />
             </intent-filter>
@@ -41,8 +45,7 @@
 
         <service
             android:name=".services.NotificationService"
-            android:exported="false" >
-        </service>
+            android:exported="false"></service>
 
     </application>
 

@@ -27,6 +27,7 @@ public class ApplicationState extends Application {
 	private String recordFileName;
 	private MediaRecorder myRecorder;
 	private Boolean isPopUpOn = false;
+	private Boolean lockScreenDialogOpen = false;
 	private boolean isRunWidget = false;
 	private Handler hndDoActions;
 	private Runnable rnaDoActions;
@@ -203,4 +204,11 @@ public class ApplicationState extends Application {
 		return lastTripReceived;
 	}
 
+	public Boolean isLockScreenDialogOpen() {
+		return lockScreenDialogOpen;
+	}
+
+	public void setLockScreenDialogOpen(Boolean lockScreenDialogOpen) {
+		this.lockScreenDialogOpen = lockScreenDialogOpen;
+	}
 }
